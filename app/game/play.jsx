@@ -66,7 +66,7 @@ const play = () => {
 
             if (articleTitle !== linkStack[linkStack.length - 1]) {
                 setScore(prev => prev + 1);
-                setLinkStack(prev => [...prev, articleTitle]);
+                setLinkStack(prev => [...prev, normalizeTitle(articleTitle)]);
                 setUrl(clickedUrl);
             }
 
@@ -127,7 +127,7 @@ const play = () => {
                             style={{ maxHeight: 250 }} 
                             renderItem={({ item }) => (
                                 <View className="items-center mb-3">
-                                    <Text className="text-2xl text-cyan-600">↓</Text>
+                                    <Text className="text-3xl font-bold text-cyan-600">↓</Text>
                                     <Text className="text-lg font-medium text-cyan-800 text-center">
                                         {item.toUpperCase()}
                                     </Text>
