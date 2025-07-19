@@ -126,7 +126,7 @@ const play = () => {
                             showsVerticalScrollIndicator={false}
                             style={{ maxHeight: 250 }} 
                             renderItem={({ item }) => (
-                                <View className="items-center mb-3">
+                                <View className="items-center m-3">
                                     <Text className="text-3xl font-bold text-cyan-600">↓</Text>
                                     <Text className="text-lg font-medium text-cyan-800 text-center">
                                         {item.toUpperCase()}
