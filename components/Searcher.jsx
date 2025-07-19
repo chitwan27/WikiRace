@@ -4,6 +4,7 @@ import { getArticles } from '../services/wikiApi'
 import { useEffect, useState } from 'react'
 
 const Searcher = ({ placeholder = "Type Something Here", sendOutput }) => {
+
   const [query, setQuery] = useState("")
   const [selectedTitle, setSelectedTitle] = useState(null)
 
@@ -13,16 +14,17 @@ const Searcher = ({ placeholder = "Type Something Here", sendOutput }) => {
     const timeoutId = setTimeout(() => {
       if (query.trim()) {
         refetch()
+        sendOutput(null)
         setSelectedTitle(null) // clear selection if new input
       } else {
         reset()
       }
     }, 500)
-
     return () => clearTimeout(timeoutId)
   }, [query])
 
   return (
+
     <View className="w-full px-5 h-72">
 
       {/* Search Input */}
@@ -47,12 +49,12 @@ const Searcher = ({ placeholder = "Type Something Here", sendOutput }) => {
                   setSelectedTitle(item.title)
                   sendOutput(item.title)
                 }}
-                className={`border-b py-3 px-2 ${isSelected ? 'bg-violet-300 border-2' : 'bg-white'}`}
+                className={`border-b py-3 px-2 ${isSelected ? 'bg-violet-300 border-2' : 'bg-inherit'}`}
               >
-                <Text className={`text-lg font-bold ${isSelected ? 'text-purple-700' : 'text-black'}`}>
+                <Text className={`text-lg font-bold ${isSelected ? 'text-purple-800' : 'text-pink-500'}`}>
                   {item.title}
                 </Text>
-                <Text className="text-sm">
+                <Text className={`text-sm ${isSelected ? 'text-purple-700' : 'text-pink-600'}`}>
                   {item.extract?.substring(0, 173) + "..."}
                 </Text>
               </TouchableOpacity>
@@ -85,6 +87,7 @@ const Searcher = ({ placeholder = "Type Something Here", sendOutput }) => {
           <ActivityIndicator size="large" color="#1234ff" />
         </View>
       )}
+
     </View>
   )
 }

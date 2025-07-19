@@ -5,8 +5,8 @@ import { useState } from 'react'
 
 const gameStart = () => {
 
-  const [firstArticle, setFirstArticle] = useState("")
-  const [secondArticle, setSecondArticle] = useState("")
+  const [firstArticle, setFirstArticle] = useState(null)
+  const [secondArticle, setSecondArticle] = useState(null)
 
   return (
     <View className="flex-1 items-center justify-center gap-7">
@@ -15,19 +15,22 @@ const gameStart = () => {
         Pick Two Articles
       </Text>
 
-      <Searcher 
-      placeholder="Select The First Article"
-      sendOutput={setFirstArticle}
-      output={firstArticle}
+      <Searcher
+        placeholder="Select The First Article"
+        sendOutput={setFirstArticle}
+        output={firstArticle}
       />
 
-      <Searcher 
-      placeholder="Select The Second Article"
-      sendOutput={setSecondArticle}
-      output={secondArticle}
+      <Searcher
+        placeholder="Select The Second Article"
+        sendOutput={setSecondArticle}
+        output={secondArticle}
       />
 
-      <Goto route="/game" text="Start Game"/>
+      <Goto disabled={!firstArticle || !secondArticle}
+        params={{ firstArticle, secondArticle }}
+        route="/game/play" text="Start Game"
+      />
 
     </View>
   )

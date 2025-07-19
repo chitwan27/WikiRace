@@ -263,6 +263,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				CODE_SIGN_ENTITLEMENTS = WikiRace/WikiRace.entitlements;
 			};
 			name = Debug;
 		};
@@ -289,6 +290,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "WikiRace/WikiRace-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				CODE_SIGN_ENTITLEMENTS = WikiRace/WikiRace.entitlements;
 			};
 			name = Release;
 		};
