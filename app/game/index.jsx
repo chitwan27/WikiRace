@@ -27,7 +27,7 @@ const gameStart = () => {
         output={secondArticle}
       />
 
-      <Goto disabled={!firstArticle || !secondArticle}
+      <Goto disabled={!firstArticle || !secondArticle || firstArticle==secondArticle}
         params={{ firstArticle, secondArticle }}
         route="/game/play" text="Start Game"
       />

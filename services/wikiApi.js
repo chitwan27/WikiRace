@@ -55,9 +55,6 @@ async function getArticles(query = "", options = {}) {
         const searchData = await searchRes.json();
         const results = searchData.query?.search;
 
-        if (!results || results.length === 0)
-            throw new Error("No search results found.");
-
         // Step 2: Fetch extracts for the article titles
         const titles = results.map(r => r.title).join("|");
 
