@@ -21,7 +21,7 @@ const Goto = ({ text = "Go To:", route, params = null, disabled = false }) => {
         >
             <Text className={`font-light text-5xl/normal text-green-700 
                 px-7 border-2 rounded-3xl border-green-700 
-                ${disabled ? 'bg-gray-300' : 'bg-cyan-300'}`}>
+                ${disabled ? 'bg-gray-300' : 'bg-cyan-200'}`}>
 
                 {text}
 

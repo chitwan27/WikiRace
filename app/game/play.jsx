@@ -87,7 +87,7 @@ const play = () => {
     return (
         <View className="flex-1">
 
-            <View className="bg-violet-300 dark:bg-violet-700 border-y-2 border-slate-700 p-3 justify-evenly items-center">
+            <View className="bg-violet-100 dark:bg-violet-900 border-y-2 border-slate-700 p-3 justify-evenly items-center">
                 <Text numberOfLines={1} ellipsizeMode="tail" className="text-2xl font-semibold text-indigo-700 dark:text-red-100">{firstArticle}</Text>
                 <View className="border-b-2 m-3 border-fuchsia-950 self-stretch" />
                 <Text numberOfLines={1} ellipsizeMode="tail" className="text-2xl font-semibold text-indigo-700 dark:text-red-100">{lastArticle}</Text>
@@ -109,7 +109,7 @@ const play = () => {
                         onShouldStartLoadWithRequest={handleLinkClick}
                     />
 
-                    <View className="bg-violet-300 dark:bg-violet-700 border-y-2 border-slate-700 p-3 justify-evenly items-center">
+                    <View className="bg-violet-100 dark:bg-violet-900 border-y-2 border-slate-700 p-3 justify-evenly items-center">
                         <Text className="text-2xl font-semibold text-indigo-700 dark:text-red-100">Progress Tracker</Text>
                         <View className="border-b-2 m-3 border-fuchsia-950 self-stretch" />
                         <Text className="text-2xl font-semibold text-indigo-700 dark:text-red-100">Score: {score}</Text>
@@ -117,12 +117,12 @@ const play = () => {
                 </>
 
             ) : (
-                <View className="flex-1 items-center justify-evenly p-5 bg-pink-100 dark:bg-teal-950">
+                <View className="flex-1 items-center justify-evenly p-5">
                     <Text className="font-serif text-6xl text-cyan-700 dark:text-indigo-100 font-bold">Game Over</Text>
-                    <Text className="text-4xl text-cyan-950 p-3 m-3 bg-purple-300 border-2 rounded-3xl border-fuchsia-950">
+                    <Text className="text-4xl text-cyan-950 p-3 m-3 bg-purple-100 border-2 rounded-3xl border-fuchsia-950">
                         Total Links Clicked: {score}
                     </Text>
-                    <View className="bg-purple-300 items-center w-96 border-2 rounded-3xl p-3 border-fuchsia-950">
+                    <View className="bg-purple-100 items-center w-96 border-2 rounded-3xl p-3 border-fuchsia-950">
                         {/* Section Title */}
                         <Text className="text-4xl font-semibold border-b-2 border-fuchsia-950 text-cyan-700 p-3">Your Path</Text>
 
@@ -136,7 +136,7 @@ const play = () => {
                             renderItem={({ item }) => (
                                 <View className="items-center mx-3">
                                     <Text className="text-3xl font-bold text-cyan-700">↓</Text>
-                                    <Text className="text-lg font-medium text-cyan-700 text-center">
+                                    <Text className="text-lg border-2 rounded-3xl p-3 border-fuchsia-950 font-medium text-cyan-700 text-center">
                                         {item.toUpperCase()}
                                     </Text>
                                 </View>
@@ -145,13 +145,13 @@ const play = () => {
                     </View>
                     <TouchableOpacity onPress={() => { router.dismiss() }}>
                         <Text className="font-light text-5xl/normal text-green-700 
-                                        px-7 border-2 rounded-3xl border-green-700 bg-cyan-300">
+                                        px-7 border-2 rounded-3xl border-green-700 bg-cyan-200">
                             Play Again
                         </Text>
                     </TouchableOpacity >
                     <TouchableOpacity onPress={() => { router.dismissAll() }}>
                         <Text className="font-light text-5xl/normal text-green-700 
-                                        px-7 border-2 rounded-3xl border-green-700 bg-cyan-300">
+                                        px-7 border-2 rounded-3xl border-green-700 bg-cyan-200">
                             Main Menu
                         </Text>
                     </TouchableOpacity >
