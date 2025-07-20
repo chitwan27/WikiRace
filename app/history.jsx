@@ -1,9 +1,8 @@
 import { View, Text } from 'react-native'
-import React from 'react'
 
 const history = () => {
   return (
-    <View>
+    <View className="flex-1 justify-center gap-20 items-center">
       <Text>history</Text>
     </View>
   )

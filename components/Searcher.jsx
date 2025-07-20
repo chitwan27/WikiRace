@@ -29,7 +29,7 @@ const Searcher = ({ placeholder = "Type Something Here", sendOutput }) => {
 
       {/* Search Input */}
       <TextInput
-        className="text-3xl border-2 rounded-lg text-center mb-3"
+        className="text-3xl border-2 rounded-lg text-center mb-3 text-black dark:text-white"
         placeholder={placeholder}
         value={query}
         onChange={(e) => setQuery(e.nativeEvent.text)}
@@ -66,7 +66,7 @@ const Searcher = ({ placeholder = "Type Something Here", sendOutput }) => {
       {/* Empty state */}
       {!loading && !error && Array.isArray(data) && data.length === 0 && (
         <View className="py-7">
-          <Text className="text-lg text-center font-bold">
+          <Text className="text-lg text-center font-bold text-black dark:text-white">
             No Articles Found
           </Text>
         </View>
@@ -84,7 +84,7 @@ const Searcher = ({ placeholder = "Type Something Here", sendOutput }) => {
       {/* Loading */}
       {loading && (
         <View className="py-7">
-          <ActivityIndicator size="large" color="#1234ff" />
+          <ActivityIndicator size="small" color="#1234ff" />
         </View>
       )}
 

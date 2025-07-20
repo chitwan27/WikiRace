@@ -18,8 +18,8 @@ export default function App() {
       </View>
       
       <Goto route="/game" text="New Game" />
-      <Goto route="/history" text="History" />
-      <Goto route="/settings" text="Settings" />
+      {/* <Goto route="/history" text="History" />
+      <Goto route="/settings" text="Settings" /> */}
       <Goto route="/about" text="About" />
 
     </View>
