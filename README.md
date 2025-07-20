@@ -1,6 +1,6 @@
 # Wiki Race
 
-### React Native App For Playing The Wikipedia Racing Game
+React Native App For Playing The Wikipedia Racing Game
 
 ---
 
