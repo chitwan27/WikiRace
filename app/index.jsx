@@ -12,7 +12,7 @@ export default function App() {
         </Text>
 
         <Text className="font-sans text-3xl p-5 text-center text-sky-500">
-          Connect two wikipedia articles in the fewest clicks possible.
+          Connect two wikipedia articles by the fewest links possible.
         </Text>
 
       </View>

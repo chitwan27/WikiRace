@@ -27,8 +27,9 @@ const play = () => {
     const [gameOver, setGameOver] = useState(false);
 
     useEffect(() => {
-
-        Vibration.vibrate(500);
+        if (score != 0) {
+            Vibration.vibrate(360);
+        }
 
         const onBackPress = () => {
 
@@ -116,7 +117,7 @@ const play = () => {
                 </>
 
             ) : (
-                <View className="flex-1 items-center justify-evenly p-5 bg-pink-300 dark:bg-pink-700">
+                <View className="flex-1 items-center justify-evenly p-5 bg-pink-100 dark:bg-teal-950">
                     <Text className="font-serif text-6xl text-cyan-700 dark:text-indigo-100 font-bold">Game Over</Text>
                     <Text className="text-4xl text-cyan-950 p-3 m-3 bg-purple-300 border-2 rounded-3xl border-fuchsia-950">
                         Total Links Clicked: {score}
